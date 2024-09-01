@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]</title>
+    <link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    @* Start Header *@
+    <nav class="mt-5">
+        <center>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Home</a>
+            <a asp-controller="Home" asp-action="About" class="btn btn-primary">About</a>
+        </center>
+    </nav>
+    @* End Header *@
+
+    @* Start Body *@
+    <div>
+        @RenderBody()
+    </div>
+    @* End Body *@
+
+    @* Start Footer *@
+    <footer>
+        <center>
+            <div>
+                <p>
+                    Copyrights &copy; for Mahmoud @DateTime.Now.Year
+                </p>
+            </div>
+        </center>
+    </footer>
+    @* End Footer *@
+</body>
+</html>
